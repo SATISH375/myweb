@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+	
+    stages {
+        stage('SCM') {
+            steps {
+                git branch: 'main', credentialsId: 'Gitacc', url: 'https://github.com/SATISH375/cicd.git'
+            }
+        }
+		stage('mvn Build'){
+		    steps { 
+				sh '''pwd
+				wget https://static.javatpoint.com/springboot/download/spring-boot-hello-world-example.zip
+				tar -xvf spring-boot-hello-world-example.zip
+				cd spring-boot-hello-world-example.zip
+				apt update
+				apt install unzip 
+				unzip spring-boot-hello-world-example.zip
+				mvn clean package
+				'''
+			}
+		}
+	}
+}	
