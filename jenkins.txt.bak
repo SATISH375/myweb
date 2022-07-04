@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('SCM') {
             steps {
-                git branch: 'main', credentialsId: 'Gitacc', url: 'https://github.com/SATISH375/cicd.git'
+                git 'https://github.com/SATISH375/myweb.git'
             }
         }
 		stage('mvn Build'){
