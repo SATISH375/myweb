@@ -12,7 +12,7 @@ pipeline {
 				sh '''cd
 				wget https://static.javatpoint.com/springboot/download/spring-boot-hello-world-example.zip
 				apt update
-				apt install unzip 
+				sudo apt install unzip 
 				unzip spring-boot-hello-world-example.zip
 				cd spring-boot-hello-world-example.zip
 				mvn clean package
