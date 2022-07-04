@@ -9,7 +9,7 @@ pipeline {
         }
 		stage('mvn Build'){
 		    steps { 
-				sh '''cd ../../../..
+				sh '''cd ../../../../..
 				pwd
 				wget https://static.javatpoint.com/springboot/download/spring-boot-hello-world-example.zip
 				sudo apt update
